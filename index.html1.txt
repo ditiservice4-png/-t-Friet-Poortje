@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'t Friet Poortje - De Lekkerste Friet van Brugge</title>
+    <meta name="description" content="'t Friet Poortje in Brugge - Verse Belgische friet, huisgemaakte snacks en vriendelijke service. Dudzeelse Steenweg 95, 8000 Brugge.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigatie -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">
+                    <span class="logo-icon"><i class="fas fa-french-fries"></i></span>
+                    <span class="logo-text">'t Friet Poortje</span>
+                </a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#openingstijden" class="nav-link">Openingstijden</a></li>
+                    <li><a href="#over-ons" class="nav-link">Over Ons</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Sectie -->
+    <section id="home" class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i> 4.7/5 op Restaurant Guru
+            </div>
+            <h1 class="hero-title">De lekkerste friet van Brugge</h1>
+            <p class="hero-subtitle">Verse Belgische friet, huisgemaakte snacks en altijd vriendelijke service</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">Bekijk Menu</a>
+                <a href="tel:050335228" class="btn btn-secondary"><i class="fas fa-phone"></i> Bel Nu</a>
+            </div>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Verse friet dagelijks</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Huisgemaakte snacks</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Altijd vers bereid</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Info Banners -->
+    <section class="info-banners">
+        <div class="container">
+            <div class="banners-grid">
+                <div class="info-banner">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Locatie</strong>
+                        <span>Dudzeelse Steenweg 95, 8000 Brugge</span>
+                    </div>
+                </div>
+                <div class="info-banner">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <strong>Telefoon</strong>
+                        <span>050 33 52 28</span>
+                    </div>
+                </div>
+                <div class="info-banner">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Vandaag Open</strong>
+                        <span id="openStatus">Laden...</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Sectie -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Ons Menu</span>
+                <h2 class="section-title">Wat serveren wij?</h2>
+                <p class="section-subtitle">Klassieke Belgische friet met een uitgebreide keuze aan snacks en sauzen</p>
+            </div>
+
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Alles</button>
+                <button class="category-btn" data-category="friet">Friet</button>
+                <button class="category-btn" data-category="snacks">Snacks</button>
+                <button class="category-btn" data-category="burgers">Burgers</button>
+                <button class="category-btn" data-category="sauzen">Sauzen</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Friet -->
+                <div class="menu-item" data-category="friet">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400" alt="Kleine Friet">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Kleine Friet</h3>
+                            <span class="price">€3,50</span>
+                        </div>
+                        <p>Verse Belgische friet, kleine portie</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="friet">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1585109649139-366815a0d713?w=400" alt="Middel Friet">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Middel Friet</h3>
+                            <span class="price">€4,50</span>
+                        </div>
+                        <p>Onze klassieker - perfecte portie</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="friet">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?w=400" alt="Grote Friet">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Grote Friet</h3>
+                            <span class="price">€5,50</span>
+                        </div>
+                        <p>Voor de echte frietliefhebber</p>
+                    </div>
+                </div>
+
+                <!-- Snacks -->
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400" alt="Frikandel">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Frikandel</h3>
+                            <span class="price">€2,50</span>
+                        </div>
+                        <p>De klassieke Belgische frikandel</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400" alt="Kroket">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Kroket</h3>
+                            <span class="price">€2,80</span>
+                        </div>
+                        <p>Huisgemaakte kroket met ragout</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400" alt="Berenklauw">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Berenklauw</h3>
+                            <span class="price">€3,20</span>
+                        </div>
+                        <p>Frikandel met curryketchup en ui</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=400" alt="Mexicano">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Mexicano</h3>
+                            <span class="price">€3,00</span>
+                        </div>
+                        <p>Pittige Mexicaanse snack</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="snacks">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?w=400" alt="Kaassoufflé">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Kaassoufflé</h3>
+                            <span class="price">€3,00</span>
+                        </div>
+                        <p>Hollandse kaassoufflé, knapperig gebakken</p>
+                    </div>
+                </div>
+
+                <!-- Burgers -->
+                <div class="menu-item" data-category="burgers">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Bicky Burger">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Bicky Burger</h3>
+                            <span class="price">€4,50</span>
+                        </div>
+                        <p>De iconische Belgische burger met Bicky-saus</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400" alt="Hamburger">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Hamburger</h3>
+                            <span class="price">€4,00</span>
+                        </div>
+                        <p>Klassieke hamburger met vers broodje</p>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="menu-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Cheeseburger">
+                    </div>
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Cheeseburger</h3>
+                            <span class="price">€4,50</span>
+                        </div>
+                        <p>Met gesmolten cheddar kaas</p>
+                    </div>
+                </div>
+
+                <!-- Sauzen -->
+                <div class="menu-item sauzen-item" data-category="sauzen">
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Mayonaise</h3>
+                            <span class="price">€0,80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item sauzen-item" data-category="sauzen">
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Ketchup</h3>
+                            <span class="price">€0,80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item sauzen-item" data-category="sauzen">
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Curryketchup</h3>
+                            <span class="price">€0,80</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item sauzen-item" data-category="sauzen">
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Joppiesaus</h3>
+                            <span class="price">€1,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item sauzen-item" data-category="sauzen">
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Speciaal</h3>
+                            <span class="price">€1,20</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item sauzen-item" data-category="sauzen">
+                    <div class="menu-content">
+                        <div class="menu-header">
+                            <h3>Oorlog</h3>
+                            <span class="price">€1,50</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-note">
+                <i class="fas fa-info-circle"></i>
+                <p>Prijzen onder voorbehoud. Vraag naar onze acties en seizoenspecialiteiten!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Openingstijden Sectie -->
+    <section id="openingstijden" class="openingstijden">
+        <div class="container">
+            <div class="openingstijden-wrapper">
+                <div class="openingstijden-content">
+                    <span class="section-label">Wanneer open?</span>
+                    <h2 class="section-title">Openingstijden</h2>
+                    <p class="openingstijden-intro">Kom langs voor verse friet op deze tijden:</p>
+                    
+                    <div class="timetable">
+                        <div class="time-row" data-day="1">
+                            <span class="day">Maandag</span>
+                            <span class="time closed">Gesloten</span>
+                        </div>
+                        <div class="time-row" data-day="2">
+                            <span class="day">Dinsdag</span>
+                            <span class="time">17:30 - 22:00</span>
+                        </div>
+                        <div class="time-row" data-day="3">
+                            <span class="day">Woensdag</span>
+                            <span class="time">11:30 - 13:00, 17:30 - 22:00</span>
+                        </div>
+                        <div class="time-row" data-day="4">
+                            <span class="day">Donderdag</span>
+                            <span class="time">11:30 - 13:00, 17:30 - 22:00</span>
+                        </div>
+                        <div class="time-row" data-day="5">
+                            <span class="day">Vrijdag</span>
+                            <span class="time">11:30 - 13:00, 17:30 - 23:00</span>
+                        </div>
+                        <div class="time-row" data-day="6">
+                            <span class="day">Zaterdag</span>
+                            <span class="time">11:30 - 13:00, 17:30 - 22:00</span>
+                        </div>
+                        <div class="time-row" data-day="0">
+                            <span class="day">Zondag</span>
+                            <span class="time">17:30 - 22:00</span>
+                        </div>
+                    </div>
+
+                    <div class="vandaag-open">
+                        <i class="fas fa-door-open"></i>
+                        <div>
+                            <strong>Vandaag:</strong>
+                            <span id="vandaagStatus">Controleren...</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="openingstijden-image">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Gezellige frituur">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Over Ons Sectie -->
+    <section id="over-ons" class="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?w=600" alt="Friet bakken">
+                    <div class="experience-badge">
+                        <span class="text">Familie</span>
+                        <span class="years">frituur</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-label">Over Ons</span>
+                    <h2 class="section-title">'t Friet Poortje sinds jaar en dag</h2>
+                    <p class="about-text">
+                        Welkom bij 't Friet Poortje, dé frituur in Brugge waar kwaliteit en gezelligheid hand in hand gaan. 
+                        Wij staan bekend om onze <strong>verse, goudbruine friet</strong> die dagelijks vers wordt bereid 
+                        met de beste aardappelen.
+                    </p>
+                    <p class="about-text">
+                        Onze gasten waarderen niet alleen onze friet, maar ook de <strong>huisgemaakte snacks</strong> 
+                        en de vriendelijke, persoonlijke service. Of je nu komt voor een snelle hap of om te genieten 
+                        van onze gezellige zitruimte, bij ons ben je altijd welkom.
+                    </p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <strong>Topkwaliteit</strong>
+                                <span>5/5 beoordelingen</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-heart"></i>
+                            <div>
+                                <strong>Met passie</strong>
+                                <span>Huisgemaakte recepten</span>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-users"></i>
+                            <div>
+                                <strong>Gezelligheid</strong>
+                                <span>Terras & zitruimte</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Sectie -->
+    <section class="reviews">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Reviews</span>
+                <h2 class="section-title">Wat klanten zeggen</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Echt een betere friet in de regio. Momenteel GEEN betere frituur gevonden in Brugge. Wat mij betreft een MUST om te gaan!"</p>
+                    <div class="review-author">
+                        <strong>Yves Huysentruyt</strong>
+                        <span>Google Review</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Echt lekkere frietjes! Perfect gebakken, knapperig van buiten en zacht van binnen. De snacks zijn ook altijd vers."</p>
+                    <div class="review-author">
+                        <strong>Anoniem</strong>
+                        <span>Google Review</span>
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Heerlijke friet en heel vriendelijke bediening. De porties zijn royaal en de prijs-kwaliteit is uitstekend!"</p>
+                    <div class="review-author">
+                        <strong>Tevreden Klant</strong>
+                        <span>Restaurant Guru</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reviews-cta">
+                <a href="https://www.google.com/search?q=t+friet+poortje+brugge" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-google"></i> Bekijk alle reviews
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Sectie -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-label">Contact</span>
+                    <h2 class="section-title">Kom langs of bel ons</h2>
+                    <p class="contact-intro">We zijn te vinden in Brugge, makkelijk bereikbaar met voldoende parkeergelegenheid.</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Adres</strong>
+                                <span>Dudzeelse Steenweg 95<br>8000 Brugge</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Telefoon</strong>
+                                <span><a href="tel:050335228">050 33 52 28</a></span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Openingstijden</strong>
+                                <span>Di-Zo: zie openingstijden</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.5!2d3.2167!3d51.2167!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c350d0c5e9d6b1%3A0x8b8b8b8b8b8b8b8b!2sDudzeelse%20Steenweg%2095%2C%208000%20Brugge!5e0!3m2!1snl!2sbe!4v1234567890" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <h3>Stuur ons een bericht</h3>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Naam</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefoon (optioneel)</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Bericht</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Verstuur bericht</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon"><i class="fas fa-french-fries"></i></span>
+                        <span class="logo-text">'t Friet Poortje</span>
+                    </div>
+                    <p>De lekkerste friet van Brugge sinds jaar en dag. Vers, knapperig en altijd met een glimlach geserveerd.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Snelle links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#openingstijden">Openingstijden</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Populair</h4>
+                    <ul>
+                        <li><a href="#menu">Middel Friet</a></li>
+                        <li><a href="#menu">Bicky Burger</a></li>
+                        <li><a href="#menu">Huisgemaakte Kroket</a></li>
+                        <li><a href="#menu">Speciaal saus</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>Dudzeelse Steenweg 95<br>8000 Brugge</p>
+                    <p><a href="tel:050335228">050 33 52 28</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 't Friet Poortje. Alle rechten voorbehouden.</p>
+                <p class="credits">Met <i class="fas fa-heart"></i> gebakken in Brugge</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
